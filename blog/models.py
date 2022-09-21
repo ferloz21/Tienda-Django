@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class categoria(models.Model):
+class Categoria(models.Model):
     nombre=models.CharField(max_length=50)
     create=models.DateTimeField(auto_now_add=True)
     update=models.DateTimeField(auto_now_add=True)
@@ -23,7 +23,7 @@ class Post(models.Model):
     contenido=models.CharField(max_length=50)
     imagen=models.ImageField(upload_to='blog', null=True, blank=True)
     autor=models.ForeignKey(User, on_delete=models.CASCADE)
-    categorias=models.ManyToManyField(categoria)
+    categorias=models.ManyToManyField(Categoria)
     create=models.DateTimeField(auto_now_add=True)
     update=models.DateTimeField(auto_now_add=True)
     
