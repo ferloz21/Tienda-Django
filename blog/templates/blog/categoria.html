@@ -50,7 +50,7 @@
         
         
         
-            {{categoria.nombre}}
+           <a href="{% url 'categoria' categoria.id %}"> {{categoria.nombre}} </a>
 
           {% endfor %}
 
