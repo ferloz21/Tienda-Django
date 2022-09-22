@@ -8,8 +8,17 @@
 {% block content %}
 
 
-<h1>contacto</h1>
+<div>
+    
 
+    <form action="" method="POST" >
+    {% csrf_token %}
+    <table style="color: white;">{{formulario.as_table}}</table>
+    <input type="submit" value="Enviar">
+    </form>
+
+
+</div>
 
 {% endblock %}
     
