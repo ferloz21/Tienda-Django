@@ -12,6 +12,5 @@ def tienda (request):
 
 
 
-def contacto (request):
-    return render(request,"appweb/contacto.html")
+
 
