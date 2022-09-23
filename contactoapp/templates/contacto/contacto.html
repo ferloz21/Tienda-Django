@@ -8,8 +8,26 @@
 {% block content %}
 
 
-<h1>contacto</h1>
+<div>
 
+
+    {% if "valido" in request.GET %}
+
+        <p style="color:white">El formulario ya ha sido enviado</p>
+
+
+    {% endif %}
+    
+
+    <form action="" method="POST" >
+    {% csrf_token %}
+    <table style="color: white;">{{formulario.as_table}}</table>
+    <input type="submit" value="Enviar">
+    </form>
+
+
+</div>
+{{request.POST}}
 
 {% endblock %}
     
