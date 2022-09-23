@@ -7,8 +7,7 @@ def home (request):
     return render(request,"appweb/home.html")
 
 
-def tienda (request):
-    return render(request,"appweb/tienda.html")
+
 
 
 
